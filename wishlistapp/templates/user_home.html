@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product List</title>
+    <link rel="stylesheet" href="{% static 'css/aa10.css' %}">
 </head>
 <body>
     <h1>Product List</h1>
@@ -16,7 +18,7 @@
                         <h5 class="card-title">Productname: {{ product.Productname }}</h5>
                         <p class="card-text">Productprice: {{ product.Productprice }}</p>
                         <p class="card-text">tilte: {{ product.title }}</p>
-                        <img src="{{ product.img }}" class="card-img-top" alt="{{ product.name }}">
+                        <img src="{{ product.img }}" class="card-img-top" alt="{{ product.img }}">
                         
                         <!-- Add Wishlist Button -->
                         <form method="post" action="{% url 'addwishlist' product.id %}" style="display: inline;">

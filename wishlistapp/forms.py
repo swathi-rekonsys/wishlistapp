@@ -1,6 +1,7 @@
 from django import forms
 from .models import User, Product, Wishlist
 
+
 class RegistrationForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
 
@@ -18,3 +19,4 @@ class WishlistForm(forms.ModelForm):
     class Meta:
         model = Wishlist
         fields = []
+   
